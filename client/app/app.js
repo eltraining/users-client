@@ -1,4 +1,6 @@
 import angular from 'angular';
+import 'expose?$!expose?jQuery!jquery';
+import 'bootstrap-webpack';
 import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
@@ -16,5 +18,5 @@ angular.module('app', [
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
   })
-
+    
   .component('app', AppComponent);
