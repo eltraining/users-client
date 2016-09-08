@@ -12,6 +12,8 @@ import lodash   from 'lodash';
 import gutil    from 'gulp-util';
 import serve    from 'browser-sync';
 import del      from 'del';
+import url      from 'url';
+import proxy    from 'proxy-middleware';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import colorsSupported      from 'supports-color';
@@ -76,12 +78,16 @@ gulp.task('serve', () => {
 
   var compiler = webpack(config);
 
+  var proxyOptions = url.parse('http://localhost:8080/greeting');
+  proxyOptions.route = '/greeting';
+
   serve({
     port: process.env.PORT || 3000,
     open: false,
     server: {baseDir: root},
     middleware: [
       historyApiFallback(),
+      proxy(proxyOptions),
       webpackDevMiddleware(compiler, {
         stats: {
           colors: colorsSupported,
