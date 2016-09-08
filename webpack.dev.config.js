@@ -16,4 +16,19 @@ config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin()
 ]);
 
+config.devServer = {
+           proxy: {
+             '/login': {
+               target: 'http://localhost:8090/login',
+               secure: false
+             }
+           }
+         };
+
+
+function logProxyRequest(request) {
+    "use strict";
+    console.log("Proxy request: ["+new Date().toISOString()+'] '+request.url);
+}
+
 module.exports = config;

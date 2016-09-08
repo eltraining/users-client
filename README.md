@@ -2,7 +2,7 @@
 
 Based on
 
-* https://github.com/AngularClass/NG6-todomvc-starter
+* https://angularclass.github.io/NG6-starter/
 
 Additional packages:
 
