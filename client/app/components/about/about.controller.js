@@ -4,6 +4,8 @@ class AboutController {
         this.name = 'about';
     }
 
+
+
 }
 
 export default AboutController;
