@@ -78,7 +78,7 @@ gulp.task('serve', () => {
 
   var compiler = webpack(config);
 
-  var proxyOptions = url.parse('http://localhost:8080/greeting');
+  var proxyOptions = url.parse('http://localhost:8090/greeting');
   proxyOptions.route = '/greeting';
 
   serve({
