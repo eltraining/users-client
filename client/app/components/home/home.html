@@ -4,14 +4,19 @@
 <main class="home">
   <div>
     <h1>Found in {{ $ctrl.name }}.html</h1>
-    <pre>{{$ctrl.greeting | json}}</pre>
+
 
     <br>
     <bla>
-    Search: <input ng-model="$ctrl.query" />
+    Login: <input ng-model="$ctrl.userName" />
     <br>
-    Current Value : {{$ctrl.query}}
+      Pass: <input ng-model="$ctrl.password" />
+
+      <button ng-click="$ctrl.login()">Click Me!</button>
     </bla>
+
+    <pre>{{$ctrl.response | json}}</pre>
+
   </div>
 
   <div></div>
