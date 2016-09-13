@@ -78,9 +78,12 @@ gulp.task('serve', () => {
 
   var compiler = webpack(config);
 
-  var proxyOptions = url.parse('http://localhost:8090/greeting');
-  proxyOptions.route = '/greeting';
-
+  var proxyOptions = url.parse('http://localhost:8090/login');
+  proxyOptions.route = '/login';
+/*
+  var proxyOptions = url.parse('http://localhost:8090/create');
+  proxyOptions.route = '/create';
+*/
   serve({
     port: process.env.PORT || 3000,
     open: false,

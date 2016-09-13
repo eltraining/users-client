@@ -7,7 +7,7 @@ class HomeController {
   }
 
   $onInit() {
-    this._http.get('/greeting').then(response => {
+    this._http.get('/login?name=test&password=Babst&group=ELCA').then(response => {
       this._greeting = response.data;
     });
   }
