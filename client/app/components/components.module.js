@@ -1,7 +1,7 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
-import Login from './login/login'
+import Home from './home/home.module';
+import About from './about/about.module';
+import Login from './login/login.module'
 
 
 
