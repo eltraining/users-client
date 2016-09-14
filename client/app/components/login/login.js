@@ -1,24 +1,26 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import homeComponent from './home.component';
+import loginComponent from './login.component';
+
+//TODO rename modules to .module
 
 let loginModule = angular.module('login', [
   uiRouter
 ])
-//resolve confligt: uiRouter + ngRouter; rename modules .module
+
 .config(($stateProvider, $urlRouterProvider) => {
   "ngInject";
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('home', {
+    .state('login', {
       url: '/',
-      component: 'home'
+      component: 'login'
     });
 })
 
-.component('home', homeComponent)
+.component('login', loginComponent)
 
 .name;
 
-export default homeModule;
+export default loginModule;

@@ -1,5 +1,6 @@
 class LoginController {
 
+/*@ngInject*/ //Needed when minifying the javascript
   constructor($http) {
     this.name = 'login';
     this._http = $http;

@@ -1,6 +1,6 @@
 class HomeController {
 
-  /*@ngInject*/
+  /*@ngInject*/ //Needed when minifying the javascript
   constructor($http) {
     this.name = 'home';
     this._http = $http;
