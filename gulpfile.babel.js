@@ -80,10 +80,10 @@ gulp.task('serve', () => {
 
   var proxyOptions = url.parse('http://localhost:8090/login');
   proxyOptions.route = '/login';
-/*
-  var proxyOptions = url.parse('http://localhost:8090/create');
-  proxyOptions.route = '/create';
-*/
+
+  var proxyOptions2 = url.parse('http://localhost:8090/create');
+  proxyOptions2.route = '/create';
+
   serve({
     port: process.env.PORT || 3000,
     open: false,
@@ -91,6 +91,7 @@ gulp.task('serve', () => {
     middleware: [
       historyApiFallback(),
       proxy(proxyOptions),
+      proxy(proxyOptions2),
       webpackDevMiddleware(compiler, {
         stats: {
           colors: colorsSupported,

@@ -2,7 +2,6 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import loginComponent from './login.component';
 
-//TODO rename modules to .module
 
 let loginModule = angular.module('login', [
   uiRouter
@@ -14,7 +13,7 @@ let loginModule = angular.module('login', [
 
   $stateProvider
     .state('login', {
-      url: '/',
+      url: '/login',
       component: 'login'
     });
 })

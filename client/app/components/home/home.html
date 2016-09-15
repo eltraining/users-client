@@ -7,18 +7,10 @@
 
 
     <br>
-    <bla>
-    Login: <input ng-model="$ctrl.userName" />
-    <br>
-      Pass: <input ng-model="$ctrl.password" />
 
-      <button ng-click="$ctrl.login()">Click Me!</button>
-    </bla>
 
-    <pre>{{$ctrl.response | json}}</pre>
-
-    Does it work?
-    <login></login>
+    <bla ui-sref="login" ui-sref-active="active">Login</bla>
+    <bla ui-sref="create" ui-sref-active="active">Create</bla>
 
   </div>
 
