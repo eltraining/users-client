@@ -4,7 +4,12 @@
 <main class="login">
     <div>
         <bla>
-            Login: <input ng-model="$ctrl.userName" />
+          NAME : {{$ctrl.name}}
+            <br>
+             {{$ctrl.userFactory.getUser()}}
+
+          <br>
+          Login: <input ng-model="$ctrl.userName" />
             <br>
             Pass: <input ng-model="$ctrl.password" />
 

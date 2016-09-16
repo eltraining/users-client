@@ -1,15 +1,34 @@
+
 let UserFactory = function () {
-  const user = {};
+  class User {
+
+      constructor(name) {
+          this.name = name;
+          this.isSignedIn = false;
+      }
+   }
+
+  this.user = null;
 
   let getUser = () => {
-    return user;
+    if(null == this.user) {
+      this.user = new User("");
+    }
+    return this.user;
   };
+
+  let updateUser = (name, isSignedIn) => {
+    this.user.name = name;
+    this.user.isSignedIn = isSignedIn;
+    return this.user;
+  }
 
   let isSignedIn = () => {
-    return user.isSignedIn; 
+    return this.user.isSignedIn;
   };
 
-  return { getUser, isSignedIn };
+  return { getUser, isSignedIn, updateUser };
 };
 
 export default UserFactory;
+

@@ -4,8 +4,11 @@ import UserFactory from './user.factory';
 let userModule = angular.module('user', [])
 
 //TODO why not use the Servie Recipe?
-.factory('User', UserFactory)
-  
+
+.factory('userFactory', UserFactory)
+
+
+.value('movieTitle', 'The Matrix')
 .name;
 
 export default userModule;

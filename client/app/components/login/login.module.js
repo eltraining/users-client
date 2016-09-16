@@ -4,6 +4,7 @@ import loginComponent from './login.component';
 
 
 let loginModule = angular.module('login', [
+  'user',
   uiRouter
 ])
 
